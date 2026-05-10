@@ -6,6 +6,7 @@ const navItems = [
   { label: "Home", href: "#home" },
   { label: "Skills", href: "#stack" },
   { label: "Projects", href: "#projects" },
+  { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
@@ -47,17 +48,14 @@ export default function FloatingNavbar() {
           "fixed left-1/2 top-6 z-50 w-[92%] max-w-5xl -translate-x-1/2",
           "transition-all duration-300",
 
-          hidden
-            ? "-translate-y-24 opacity-0"
-            : "translate-y-0 opacity-100",
+          hidden ? "-translate-y-24 opacity-0" : "translate-y-0 opacity-100",
 
           scrolled
             ? "bg-white/80 shadow-2xl backdrop-blur-xl rounded-2xl"
-            : "bg-white/60 backdrop-blur-md"
+            : "bg-white/60 backdrop-blur-md",
         )}
       >
         <div className="flex items-center justify-between rounded-2xl border border-slate-200 px-6 py-4">
-
           {/* Logo */}
           <a
             href="#home"
@@ -106,7 +104,7 @@ export default function FloatingNavbar() {
         <div
           className={clsx(
             "overflow-hidden transition-all duration-300 md:hidden",
-            mobileOpen ? "max-h-96 pt-3" : "max-h-0"
+            mobileOpen ? "max-h-96 pt-3" : "max-h-0",
           )}
         >
           <div className="space-y-2 rounded-2xl border border-slate-200 bg-white/90 p-4 backdrop-blur-xl">

@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function ExperienceSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
   const experiences = [
     {
       year: "Aug 2024 – Dec 2025",
@@ -39,7 +51,7 @@ export default function ExperienceSection() {
 
       <div className="relative mx-auto max-w-6xl">
         {/* Header */}
-        <div className="mb-24 text-center">
+        <div className="mb-24 text-center" data-aos="fade-up">
           <div
             className="
               inline-flex items-center gap-2 rounded-full
@@ -49,7 +61,7 @@ export default function ExperienceSection() {
               backdrop-blur-sm
             "
           >
-            <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse" />
+            <div className="h-2 w-2 animate-pulse rounded-full bg-blue-500" />
             Experience
           </div>
 
@@ -67,17 +79,20 @@ export default function ExperienceSection() {
         <div className="relative z-10">
           {/* Center Line */}
           <div
+            data-aos="fade-in"
             className="
-    absolute left-4 top-0 z-20 h-full w-[2px]
-    bg-gradient-to-b from-blue-400 via-cyan-400 to-transparent
-    md:left-1/2 md:-translate-x-1/2
-  "
+              absolute left-4 top-0 z-20 h-full w-[2px]
+              bg-gradient-to-b from-blue-400 via-cyan-400 to-transparent
+              md:left-1/2 md:-translate-x-1/2
+            "
           />
 
           <div className="space-y-14">
             {experiences.map((item, index) => (
               <div
                 key={index}
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-delay={index * 100}
                 className={`
                   relative flex flex-col md:flex-row
                   ${index % 2 === 0 ? "md:flex-row-reverse" : ""}
@@ -169,8 +184,6 @@ export default function ExperienceSection() {
             ))}
           </div>
         </div>
-
-        
       </div>
     </section>
   );
