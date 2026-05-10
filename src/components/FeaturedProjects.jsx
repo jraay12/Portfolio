@@ -1,12 +1,12 @@
 import { Link } from "react-router";
 import ProgressThumbnail from "../assets/progresso-thumbnail.png";
 import GoldSmithThumbnail from "../assets/goldsmith-thumbnail.png";
-import FindlyThumbnail from "../assets/findly-thumbnail.png"
-import SmartLeafThumbnail from "../assets/smartleaf-thumbnail.png"
+import FindlyThumbnail from "../assets/findly-thumbnail.png";
+import SmartLeafThumbnail from "../assets/smartleaf-thumbnail.png";
 export default function FeaturedProjects() {
   const projects = [
     {
-      id: "inventory-system",
+      id: "progresso",
       title: "Progresso",
       description:
         "A mobile app for managing construction projects, daily site logs, and on-site updates to improve coordination and tracking.",
@@ -16,6 +16,7 @@ export default function FeaturedProjects() {
         "Docker",
         "Github Actions",
         "Express JS",
+        "Node JS",
         "TypeScript",
         "React Native (expo)",
       ],
@@ -60,16 +61,8 @@ export default function FeaturedProjects() {
       id: "smartleaf",
       title: "Smart Leaf",
       description:
-        "A web-based internal system for managing inventory, orders, users, and basic financial tracking for small to medium operations.",
-      stack: [
-        "Prisma ORM",
-        "MySQL",
-        "Docker",
-        "Github Actions",
-        "Express JS",
-        "JavaScript",
-        "React JS",
-      ],
+        "A mobile application that detects and analyzes mango leaf diseases using AI-powered image recognition and machine learning models trained with mango leaf datasets from Kaggle.",
+      stack: ["React Native", "Python", "FastAPI", "Kaggle Dataset"],
       type: "Mobile Application",
       image: SmartLeafThumbnail,
     },

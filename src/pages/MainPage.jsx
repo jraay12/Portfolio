@@ -5,6 +5,8 @@ import FloatingNavbar from "../components/NavBar";
 import SkillsSection from "../components/SkillSections";
 import FeaturedProjects from "../components/FeaturedProjects";
 import ExperienceSection from "../components/ExperienceSection";
+import AboutSection from "../components/AboutSection";
+import ContactSection from "../components/ContactSection";
 export default function MainPage() {
   const container = useRef(null);
 
@@ -36,7 +38,7 @@ export default function MainPage() {
       });
 
       gsap.to(".floating-card", {
-        yPercent: 200,
+        yPercent: 400,
         rotation: 5,
         ease: "none",
         scrollTrigger: {
@@ -48,7 +50,7 @@ export default function MainPage() {
       });
 
       gsap.to(".hero-text", {
-        yPercent: 600,
+        yPercent: 800,
         opacity: 0,
         ease: "none",
         scrollTrigger: {
@@ -64,7 +66,7 @@ export default function MainPage() {
   }, []);
 
   return (
-    <div ref={container} className="bg-white">
+    <div ref={container} className="bg-white" id="home">
       <FloatingNavbar />
       {/* Hero */}
       <section className="relative h-[200vh] overflow-hidden bg-gradient-to-b from-white via-slate-50 to-slate-100">
@@ -168,6 +170,8 @@ export default function MainPage() {
       <SkillsSection />
       <FeaturedProjects />
       <ExperienceSection />
+      <AboutSection />
+      <ContactSection />
     </div>
   );
 }
